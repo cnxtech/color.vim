@@ -1,17 +1,17 @@
 " Default GUI Colours
-let s:foreground = "282b33"
-let s:background = "000000"
-let s:selection = "2c313c"
-let s:line = "2a2a2a"
-let s:comment = "969896"
-let s:red = "d54e53"
-let s:orange = "e78c45"
-let s:yellow = "e7c547"
-let s:green = "b9ca4a"
-let s:aqua = "70c0b1"
-let s:blue = "7aa6da"
-let s:purple = "c397d8"
-let s:window = "4d5057"
+let s:foreground = "abb2c0"
+let s:background = "282c34"
+let s:selection = "3a3f4b"
+let s:line = "2c323c"
+let s:comment = "526270"
+let s:red = "c95b69"
+let s:orange = "d19966"
+let s:yellow = "ad7c09"
+let s:green = "98c373"
+let s:aqua = "8abeb7"
+let s:blue = "4096dd"
+let s:purple = "c679dd"
+let s:window = "21252b"
 
 set background=dark
 hi clear
@@ -232,9 +232,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("LineNr", s:selection, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
-	call <SID>X("Search", s:background, s:yellow, "")
+	call <SID>X("Search", s:background, s:orange, "")
 	call <SID>X("TabLine", s:foreground, s:background, "reverse")
-	call <SID>X("StatusLine", s:window, s:yellow, "reverse")
+	call <SID>X("StatusLine", s:window, s:orange, "reverse")
 	call <SID>X("StatusLineNC", s:window, s:foreground, "reverse")
 	call <SID>X("VertSplit", s:window, s:window, "none")
 	call <SID>X("Visual", "", s:selection, "")
@@ -246,8 +246,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("MatchParen", "", s:selection, "")
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
+	call <SID>X("DiffAdd", s:selection, s:green, "")
+	call <SID>X("DiffChange", "", s:selection, "")
+	call <SID>X("DiffDelete", s:selection, s:red, "")
+	call <SID>X("DiffText", s:background, s:orange, "")
 	if version >= 700
 		call <SID>X("CursorLine", "", s:line, "none")
+		call <SID>X("CursorLineNR", s:foreground, "", "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
 		call <SID>X("PMenu", s:foreground, s:selection, "none")
 		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
