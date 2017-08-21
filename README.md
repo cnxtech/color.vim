@@ -16,6 +16,7 @@ export FZF_DEFAULT_OPTS='
 ```
 
 ## [Sway](https://github.com/SirCmpwn/sway)
+`~/.config/sway/config`
 ```
 bar {
   colors {
